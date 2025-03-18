@@ -22,16 +22,23 @@ $(document).ready(function () {
       });
 
       //Siri message animation
-      $('.siri-message').textillate({
+    $('.siri-message').textillate({
         loop: true,
         sync: true,
-        in:{
-            effect:"fadeInUp",
+        in: {
+            effect: "fadeInUp",
             sync: true
         },
-        out:{
-            effect:"fadeOutUp",
+        out: {
+            effect: "fadeOutUp",
             sync: true
         },
-    })
+    });
+    //mic button click event
+    $("#MicBtn").click(function (e) {
+        eel.playAssistantSound()
+        $("#Oval").attr("hidden", true);
+        $("#SiriWave").attr("hidden", false);
+
+    });
 });
