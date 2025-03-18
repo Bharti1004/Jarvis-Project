@@ -6,7 +6,10 @@
 #     playsound(music_dir)
 
 import os
+import eel
 from playsound import playsound
+
+@eel.expose
 
 # Define the function
 def playAssistantSound():
