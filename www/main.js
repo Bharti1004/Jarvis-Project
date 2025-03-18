@@ -9,8 +9,6 @@ $(document).ready(function () {
             effect:"bounceOut",
         },
     })
-<<<<<<< HEAD
-=======
 
     //Siri Configuration
     var siriWave = new SiriWave({
@@ -36,5 +34,4 @@ $(document).ready(function () {
             sync: true
         },
     })
->>>>>>> 8c8b51f (Jarvis)
 });
