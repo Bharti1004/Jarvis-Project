@@ -6,6 +6,7 @@ eel.init("www")
 
 from engine.features import playAssistantSound
 # from engine.features import *
+from engine.command import *
 
 eel.init("www")
 
