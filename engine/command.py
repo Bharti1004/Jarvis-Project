@@ -2,6 +2,7 @@ import pyttsx3
 import eel
 import speech_recognition as sr
 import time
+# import webbrowser
 
 def speak(text):
     engine = pyttsx3.init('sapi5')
@@ -36,7 +37,6 @@ def takecommand():
         print(f"user said:{query}")
         eel.DisplayMessage(query)
         time.sleep(2)
-        eel.ShowHood()
     except Exception as e:
         return ""
     
@@ -59,6 +59,5 @@ def allCommands():
         PlayYoutube(query)
     else:
         print("not run")   
-        
     eel.ShowHood() 
     
