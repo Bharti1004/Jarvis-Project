@@ -1,7 +1,3 @@
-from playsound import playsound
-# import eel
-# #playing assistant sound function
-# @eel.expose
-# def playAssistantSound():
-#     music_dir="www\\assets\\audio\\start_sound.mp3"
-#     playsound(music_dir)
+query = "INSERT INTO sys_command VALUES (null,'one note', 'C:\\Program Files\\Microsoft Office\\root\\Office16.ONENOTE.exe')"
+cursor.execute(query)
+con.commit()
