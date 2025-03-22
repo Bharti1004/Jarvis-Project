@@ -23,7 +23,9 @@ cursor.execute(query)
 # con.commit()
 
 # testing module
-app_name = "one note"
-cursor.execute('SELECT path FROM sys_command WHERE name IN (?)', (app_name,))
-results = cursor.fetchall()
-print(results[0][0])
+# app_name = "one note"
+# cursor.execute('SELECT path FROM sys_command WHERE name IN (?)', (app_name,))
+# results = cursor.fetchall()
+# print(results[0][0])
+# Create a table with the desired columns
+cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
