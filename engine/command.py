@@ -5,6 +5,7 @@ import time
 # import webbrowser
 
 def speak(text):
+    text = str(text)
     engine = pyttsx3.init('sapi5')
     voices = engine.getProperty('voices')
     
@@ -64,7 +65,8 @@ def allCommands(message=1):
             from engine.features import PlayYoutube
             PlayYoutube(query)
         else:
-            print("not run")  
+            from engine.features import chatBot
+            chatBot(query) 
     except:
         print("error") 
     eel.ShowHood() 
