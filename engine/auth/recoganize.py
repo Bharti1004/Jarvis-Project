@@ -36,10 +36,14 @@ def AuthenticateFace():
 
     while True:
 
-        ret, img = cam.read()  # read the frames using the above created object
+        ret, img = cam.read()
 
-        # The function converts an input image from one color space to another
+        if not ret or img is None:
+            print("❌ Failed to capture image from camera.")
+            continue  # Skip this iteration and try again
+
         converted_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
 
         faces = faceCascade.detectMultiScale(
             converted_image,
@@ -84,4 +88,3 @@ def AuthenticateFace():
     cam.release()
     cv2.destroyAllWindows()
     return flag
-
